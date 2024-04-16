@@ -1,0 +1,137 @@
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(0, 0%, 81%);
+}
+
+.container {
+  width: 80%;
+
+  display: grid;
+  gap: 20px 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 285px 265px;
+  grid-template-areas:
+    "c1 c1 c2 c3"
+    "c4 c5 c5 c3";
+}
+
+.card-1 {
+  grid-area: c1;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+}
+
+.card-2 {
+  grid-area: c2;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card-3 {
+  grid-area: c3;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-4 {
+  grid-area: c4;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-5 {
+  grid-area: c5;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.content {
+  width: 80%;
+  display: grid;
+  gap: 15px;
+  grid-template-rows: minmax(30px, 1fr) minmax(75px, auto) minmax(95px, auto);
+}
+
+.card-1 > .content,
+.card-5 > .content {
+  width: 90%;
+}
+
+.card-3 > .content {
+  height: 530px;
+  grid-template-rows: minmax(30px, 1fr) 75px 385px;
+}
+
+p {
+  margin: 0px;
+  line-height: 20px;
+}
+
+.profile {
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: 30px auto;
+  grid-template-rows: 20px 20px;
+  grid-template-areas:
+    "img name"
+    "img status";
+}
+
+.profile-img {
+  grid-area: img;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.profile-name {
+  grid-area: name;
+  align-self: end;
+}
+
+.profile-name-white-bg {
+  color: hsl(217, 19%, 35%);
+}
+
+.profile-status {
+  grid-area: status;
+  color: hsla(0, 0%, 81%, 50%);
+}
+
+.profile-status-white-bg {
+  color: hsla(217, 19%, 35%, 50%);
+}
+
+.text {
+  font-size: 21px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.text-white-bg {
+  color: hsl(217, 19%, 35%);
+}
+
+.desc {
+  color: hsla(0, 0%, 81%, 70%);
+}
+
+.desc-white-bg {
+  color: hsla(217, 19%, 35%, 70%);
+}
